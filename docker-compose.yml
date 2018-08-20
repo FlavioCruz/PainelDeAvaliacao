@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  paineldeavaliador:
+    image: ${DOCKER_REGISTRY}paineldeavaliador
+    build:
+      context: .
+      dockerfile: PaineldeAvaliador/Dockerfile
