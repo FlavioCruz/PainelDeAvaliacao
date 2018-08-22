@@ -1,0 +1,14 @@
+﻿@using PaineldeAvaliador.Models.Entities
+@{
+    ViewData["Title"] = "Index";
+    List<Candidato> candidatos = ViewData["Candidatos"] as List<Candidato>;
+    List<Keyword> palavrasChave = ViewData["Keywords"] as List<Keyword>;
+}
+
+<h2>Index</h2>
+
+@foreach(Candidato c in candidatos)
+{
+    <label>@c.Nome</label>
+
+}
