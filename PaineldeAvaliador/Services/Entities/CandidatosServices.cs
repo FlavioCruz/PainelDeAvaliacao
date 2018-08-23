@@ -1,16 +1,19 @@
-﻿using PaineldeAvaliador.DataAccess.Entities;
+﻿using PaineldeAvaliador.MySqlDataAccess.Entities;
+using PaineldeAvaliador.DataAccess.Interfaces;
 using PaineldeAvaliador.Models.Entities;
 using PaineldeAvaliador.Models.Entities.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PaineldeAvaliador.SqlServerDataAccess.Entities;
 
 namespace PaineldeAvaliador.Services.Entities
 {
     public class CandidatosServices
     {
-        private CandidatoDataAccess servicosDeCandidatos = new CandidatoDataAccess();
+        //private ICandidatoDataAccess servicosDeCandidatos = new CandidatoMySqlDataAccess();
+        private ICandidatoDataAccess servicosDeCandidatos = new CandidatoSqlServerDataAccess();
 
         public List<Candidato> GetAll()
         {

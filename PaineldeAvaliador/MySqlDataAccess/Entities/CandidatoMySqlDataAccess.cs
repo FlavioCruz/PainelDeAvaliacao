@@ -1,12 +1,14 @@
-﻿using PaineldeAvaliador.Models.Entities;
+﻿using PaineldeAvaliador.DataAccess.Entities;
+using PaineldeAvaliador.DataAccess.Interfaces;
+using PaineldeAvaliador.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PaineldeAvaliador.DataAccess.Entities
+namespace PaineldeAvaliador.MySqlDataAccess.Entities
 {
-    public class CandidatoDataAccess : DataAccess<Candidato>
+    public class CandidatoMySqlDataAccess : DataAccess<Candidato>, ICandidatoDataAccess
     {
 
         private List<Candidato> list = null;
